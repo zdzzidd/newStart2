@@ -41,5 +41,8 @@
 <h3>
     <a href="${path }/agent/login">点击登录</a>
 </h3>
+<h3>
+    <a href="${path }/agent/register">点击注册</a>
+</h3>
 </body>
 </html>

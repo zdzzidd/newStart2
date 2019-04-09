@@ -15,11 +15,11 @@
     <form action="${pageContext.request.contextPath}/agent/checkLogin/" METHOD="post">
             <tr>
                 <td>username:</td>
-                <td><input id = "username" name = "username" type="text"></td>
+                <td><input id = "userName" name = "userName" type="text"></td>
             </tr>
             <tr>
                 <td>password:</td>
-                <td><input id = "password" name = "password" type="password"></td>
+                <td><input id = "passWord" name = "passWord" type="password"></td>
             </tr>
         <tr>
                 <td><input type = "submit" value="login"></td>

@@ -28,10 +28,14 @@ public class LoginController {
         public String login(){
             return "login";
         }
-
-        //表单提交过来的路径
+        //正常访问register页面
+        @RequestMapping("/register")
+        public String register(){
+        return "register";
+    }
+        //表单提交过来的路径登陆
         @RequestMapping("/checkLogin")
-    public String checkLogin(Agent agent, Model model){
+        public String checkLogin(Agent agent, Model model){
             //调用service方法
             agent =  agentService.checkLogin(agent.getUserName(),agent.getPassWord());
             //若agent存在则添加到model里并且跳转到后台页面.
@@ -41,5 +45,16 @@ public class LoginController {
             }
             return "fail";
         }
-
+        //表单提交过来的路径注册
+        @RequestMapping("/checkRegister")
+        public String checkRegister(Agent agent, Model model){
+            //调用service方法
+            agent =  agentService.checkLogin(agent.getUserName(),agent.getPassWord());
+            //若agent存在则添加到model里并且跳转到后台页面.
+            if(agent != null){
+                model.addAttribute("agent",agent);
+                return "alluser";
+            }
+            return "fail";
+        }
 }
